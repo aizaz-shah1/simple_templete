@@ -58,9 +58,9 @@ async def estimate_car_damage(
         # Encode image as base64
         image_b64 = encode_image_to_base64(file_path)
 
-        # Check image size
-        if len(image_b64) > 180_000:
-            raise HTTPException(status_code=400, detail="Image too large. Max size is 180KB.")
+        # # Check image size
+        # if len(image_b64) > 180_000:
+        #     raise HTTPException(status_code=400, detail="Image too large. Max size is 180KB.")
 
         # Construct prompt with optional car details
         optional_context = ""
