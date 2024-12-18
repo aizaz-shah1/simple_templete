@@ -75,7 +75,7 @@ async def estimate_car_damage(
             "messages": [
                 {
                     "role": "user",
-                    "content": f'{optional_context}Analyze this car image and provide details on visible damage, repair costs, and car price. '
+                    "content": f'{optional_context}Analyze this car image and provide details on visible damage, repair costs, and car price.ALWAYS REVERIFY IF THE DAMAGES ARE REAL AS THIS IS VERY IMPORTANT '
                                f'Response format:\nCar Name: (e.g., Toyota Corolla)\nModel: (e.g., 2022)\nCar Price: '
                                f'(Estimated base price of the car)\nDamage Description: (e.g., scratches, dents)\n'
                                f'Damage Estimation: (Repair cost in USD)\nTotal Estimated Price: '
@@ -83,7 +83,7 @@ async def estimate_car_damage(
                 }
             ],
             "max_tokens": 512,
-            "temperature": 0.7,
+            "temperature": 0.1,
             "top_p": 1.0,
             "stream": False
         }
